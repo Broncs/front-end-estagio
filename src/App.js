@@ -28,15 +28,9 @@ function App() {
     }
   };
 
-  const handleSubmit = (e, textInput) => {
-    e.preventDefault();
-
-    getJSON(textInput);
-  };
-
   return (
     <Main>
-      <Form handleSubmit={handleSubmit} />
+      <Form getInfoLocation={getJSON} />
 
       {state.status === "resolved" && <InfoLocation payload={state.dataInfo} />}
       {state.status === "rejected" && <h1>{state.error}</h1>}
