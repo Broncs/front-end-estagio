@@ -36,8 +36,8 @@ export const Input = styled.input`
   }
   &:focus {
     outline: none;
-    border: 2px solid ${({ error }) => (error ? "#DC3545" : "#6aa4f8")};
-    box-shadow: 0px 0px 2px ${({ error }) => (error ? "#DC3545" : "#6aa4f8")};
+    border: 2px solid ${({ error }) => (error ? "#c83737" : "#6aa4f8")};
+    box-shadow: 0px 0px 2px ${({ error }) => (error ? "#c83737" : "#6aa4f8")};
     border-radius: 3px;
   }
 
@@ -49,7 +49,7 @@ export const Input = styled.input`
 `;
 
 export const ErrorMessage = styled.p`
-  font-size: 0.8rem;
-  color: #dc3545;
-  margin: 0.5rem 0 0 0;
+  font-size: 0.7rem;
+  color: #c83737;
+  margin: 0.4rem 0 0 0;
 `;

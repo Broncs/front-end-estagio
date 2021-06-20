@@ -15,7 +15,7 @@ const Form = ({ getInfoLocation }) => {
     }
 
     if (!regex.test(textInput)) {
-      setError({ error: true, cepError: "O CEP não é valido" });
+      setError({ error: true, cepError: "Digite um cep válido" });
       return false;
     }
 
@@ -38,6 +38,8 @@ const Form = ({ getInfoLocation }) => {
       <S.FormContainer>
         <S.Form>
           <S.Input
+            name="CEP"
+            maxLength={8}
             error={error.error}
             placeholder="00000-000"
             value={textInput}

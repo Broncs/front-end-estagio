@@ -2,7 +2,6 @@ import React from "react";
 import * as S from "./styles";
 
 const InfoLocation = ({ payload }) => {
-  console.log(payload);
   return (
     <S.InfoWrapper>
       <S.Text>
