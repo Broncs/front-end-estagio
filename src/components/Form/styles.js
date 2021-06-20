@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const FormWrapper = styled.div`
   background: white;
-
   max-width: 500px;
   width: 80%;
   border: 1px solid #dddddd;
   padding: 2rem;
+  margin-bottom: 1rem;
 `;
 export const Form = styled.form`
   display: flex;
