@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import Colors from "../Theme/Colors";
 
 export const FormWrapper = styled.div`
   background: white;
   max-width: 500px;
   width: 80%;
-  border: 1px solid #dddddd;
+  border: 1px solid ${Colors.secondary};
   padding: 2rem;
   margin-bottom: 1rem;
   display: flex;
@@ -28,16 +29,18 @@ export const Input = styled.input`
   padding: 1em;
 
   margin-right: 5px;
-  border: 1px solid ${({ error }) => (error ? "#DC3545" : "#dddddd")};
-  color: #333;
+  border: 1px solid
+    ${({ error }) => (error ? Colors.warning : Colors.secondary)};
+  color: ${Colors.primary};
 
   &::placeholder {
-    color: #757474;
+    color: #8a8888;
   }
   &:focus {
     outline: none;
-    border: 2px solid ${({ error }) => (error ? "#c83737" : "#6aa4f8")};
-    box-shadow: 0px 0px 2px ${({ error }) => (error ? "#c83737" : "#6aa4f8")};
+    border: 2px solid ${({ error }) => (error ? Colors.warning : "#6aa4f8")};
+    box-shadow: 0px 0px 2px
+      ${({ error }) => (error ? Colors.warning : "#6aa4f8")};
     border-radius: 3px;
   }
 
@@ -50,6 +53,10 @@ export const Input = styled.input`
 
 export const ErrorMessage = styled.p`
   font-size: 0.7rem;
-  color: #c83737;
-  margin: 0.4rem 0 0 0;
+  color: ${Colors.warning};
+  margin: 0.4rem 0;
+
+  @media (max-width: 600px) {
+    order: -1;
+  }
 `;

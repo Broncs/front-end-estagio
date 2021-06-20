@@ -10,12 +10,12 @@ const Form = ({ getInfoLocation }) => {
     const regex = /\d{5}-?\d{3}/gi;
 
     if (!textInput) {
-      setError({ error: true, cepError: "O CEP não pode estar vazio" });
+      setError({ error: true, cepError: "Informe um CEP válido" });
       return false;
     }
 
     if (!regex.test(textInput)) {
-      setError({ error: true, cepError: "Digite um cep válido" });
+      setError({ error: true, cepError: "Número do CEP inválido" });
       return false;
     }
 

@@ -3,6 +3,7 @@ import Form from "./components/Form/index";
 import Loading from "./components/Loading";
 import styled from "styled-components";
 import ShowError from "./components/ShowError";
+import GlobalStyle from "./globalStyle";
 
 import InfoLocation from "./components/InfoLocation";
 
@@ -40,6 +41,7 @@ function App() {
 
   return (
     <Main>
+      <GlobalStyle />
       <Form getInfoLocation={getJSON} />
 
       {state.status === "resolved" && <InfoLocation payload={state.dataInfo} />}
