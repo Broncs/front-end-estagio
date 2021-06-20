@@ -16,7 +16,7 @@ function App() {
   const getJSON = async (cep) => {
     setState({ status: "pending" });
     try {
-      const data = await fetch(`https://viacep.com.br/ws/${cep}/json`);
+      const data = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
 
       if (!data.ok) {
         throw Error("Houve um erro ao obter os dados de localização !");
@@ -30,7 +30,11 @@ function App() {
 
       setState({ status: "resolved", dataInfo: result });
     } catch (err) {
-      setState({ error: err.message, status: "rejected" });
+      console.error(err);
+      setState({
+        error: err.message,
+        status: "rejected",
+      });
     }
   };
 

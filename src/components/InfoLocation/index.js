@@ -6,7 +6,7 @@ const InfoLocation = ({ payload }) => {
     <S.InfoWrapper>
       <S.Text>
         <S.TextHighlight>CEP: </S.TextHighlight>
-        {payload.cep}
+        {payload.cep.replace("-", "")}
       </S.Text>
       <S.Text>
         <S.TextHighlight>Estado: </S.TextHighlight>

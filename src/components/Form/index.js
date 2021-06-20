@@ -39,7 +39,7 @@ const Form = ({ getInfoLocation }) => {
         <S.Form>
           <S.Input
             name="CEP"
-            maxLength={8}
+            maxLength={textInput.includes("-") ? 9 : 8}
             error={error.error}
             placeholder="00000-000"
             value={textInput}
