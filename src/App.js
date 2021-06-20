@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Form from "./components/Form/index";
+import styled from "styled-components";
 
 import InfoLocation from "./components/InfoLocation";
 
@@ -34,51 +35,22 @@ function App() {
   };
 
   return (
-    <main className="App">
-      <section>
-        <Form handleSubmit={handleSubmit} />
-      </section>
+    <Main>
+      <Form handleSubmit={handleSubmit} />
+
       {state.status === "resolved" && <InfoLocation payload={state.dataInfo} />}
       {state.status === "rejected" && <h1>{state.error}</h1>}
-    </main>
+    </Main>
   );
-
-  // if (state.status === "rejected") {
-  //   return <div>houve um erro . </div>;
-  // }
-
-  // if (state.status === "idle") {
-  //   return (
-
-  //   );
-  // }
-  // if (state.status === "pending") {
-  //   return (
-  //     <div>
-  //       <h1>LOADING DATA</h1>
-  //     </div>
-  //   );
-  // }
-
-  // if (state.status === "resolved") {
-  //   return (
-  //     <main className="App">
-  //       <section>
-  //         <form>
-  //           <input
-  //             placeholder="00000-000"
-  //             value={textInput}
-  //             onChange={(e) => setTextInput(e.target.value)}
-  //           />
-  //           <button onClick={(e) => handleSubmit(e)}>Buscar CEP</button>
-  //         </form>
-  //       </section>
-  //       <section>
-  //         <InfoLocation payload={state.dataInfo} />
-  //       </section>
-  //     </main>
-  //   );
-  // }
 }
+
+const Main = styled.main`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+`;
 
 export default App;
