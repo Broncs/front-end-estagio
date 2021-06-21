@@ -58,6 +58,14 @@ const Main = styled.main`
   justify-content: center;
   align-items: center;
   padding: 0 2rem;
+
+  @media (max-height: 320px) {
+    // on portrait  at iphone 5
+    // flex-direction: row;
+    // justify-content: center;
+    // align-items: center;
+    // padding: 0 1rem;
+  }
 `;
 
 export default App;

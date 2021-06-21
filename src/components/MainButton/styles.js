@@ -6,6 +6,6 @@ export const Button = styled.button`
   background: ${Colors.primary};
   cursor: pointer;
   color: white;
-  font-size: 1rem;
+  font-size: 1em;
   padding: 0.9em 1em;
 `;

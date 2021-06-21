@@ -6,6 +6,10 @@ export const InfoWrapper = styled(FormWrapper)`
 
   display: flex;
   flex-direction: column;
+
+  @media (max-height: 320px) {
+    padding: 1rem;
+  }
 `;
 
 export const TextHighlight = styled.span`

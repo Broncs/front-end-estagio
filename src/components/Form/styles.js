@@ -10,6 +10,10 @@ export const FormWrapper = styled.div`
   margin-bottom: 1rem;
   display: flex;
   justify-content: center;
+
+  @media (max-height: 320px) {
+    padding: 1rem;
+  }
 `;
 
 export const FormContainer = styled.div`
@@ -48,6 +52,12 @@ export const Input = styled.input`
     flex-direction: column;
     margin-right: 0;
     margin-bottom: 1rem;
+    height: 39px;
+    box-sizing: border-box;
+  }
+  @media (max-width: 300px) {
+    width: 100%;
+    box-sizing: border-box;
   }
 `;
 
