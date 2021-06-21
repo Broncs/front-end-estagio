@@ -5,6 +5,7 @@ Busca de CEP através de uma API.
 ## ✨ Demonstração
 
 Veja abaixo uma foto do projeto.
+
 ![image](https://user-images.githubusercontent.com/62390902/122801877-0fb1b380-d29b-11eb-8c83-adecd44d531e.png)
 
 Você pode conferir o resultado final em: https://front-end-estagio-teste.netlify.app/
