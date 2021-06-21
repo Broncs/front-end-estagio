@@ -39,16 +39,29 @@ const Form = ({ getInfoLocation }) => {
         <S.Form>
           <S.Input
             name="CEP"
-            maxLength={textInput.includes("-") ? 9 : 8}
+            aria-label="Informe um CEP "
+            aria-required="true"
             error={error.error}
             placeholder="00000-000"
+            maxLength={textInput.includes("-") ? 9 : 8}
             value={textInput}
             onChange={(e) => setTextInput(e.target.value)}
           />
 
-          <MainButton onClick={(e) => handleSubmit(e)}>Buscar CEP</MainButton>
+          <MainButton
+            aria-pressed="true"
+            aria-describedby="error-message"
+            aria-invalid={error.error}
+            onClick={(e) => handleSubmit(e)}
+          >
+            Buscar CEP
+          </MainButton>
         </S.Form>
-        {error.error && <S.ErrorMessage>{error.cepError}</S.ErrorMessage>}
+        {error.error && (
+          <S.ErrorMessage id="error-message" role="alert">
+            {error.cepError}
+          </S.ErrorMessage>
+        )}
       </S.FormContainer>
     </S.FormWrapper>
   );
