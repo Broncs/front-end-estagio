@@ -1,6 +1,6 @@
 # frontend-estagio
 
-Teste de busca de CEP através de uma API.
+Busca de CEP através de uma API.
 
 ## ✨ Demonstração
 
